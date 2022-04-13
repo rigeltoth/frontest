@@ -1,0 +1,39 @@
+
+<div class="row mt-5">
+
+    <div class="col-4">
+        <form>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" placeholder="cant">
+            </div>
+        </form>
+    </div>
+
+    <div class="col-8">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>cant</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of itemService.items; index as i">
+                    <th>{{ i }}</th>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.cant }}</td>
+                    <td class="m-auto">
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger ms-4 btn-sm"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    
