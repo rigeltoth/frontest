@@ -21,10 +21,6 @@ export class ItemService {
     return this.http.post(this.url_api, item)
   }
 
-  getItem(){
-
-  }
-
   updateItem(item: ItemModel){
     return this.http.put(`${this.url_api}/${item._id}`, item)
   }
