@@ -16,4 +16,20 @@ export class ItemService {
   getItems(){
     return this.http.get<ItemModel[]>(this.url_api)
   }
+
+  createItem(item: ItemModel){
+    return this.http.post(this.url_api, item)
+  }
+
+  getItem(){
+
+  }
+
+  updateItem(item: ItemModel){
+    return this.http.put(`${this.url_api}/${item._id}`, item)
+  }
+
+  deleteItem(_id: string){
+    return this.http.delete(`${this.url_api}/${_id}`)
+  }
 }
